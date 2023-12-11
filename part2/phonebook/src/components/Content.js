@@ -22,4 +22,4 @@ const Content = ({persons, allPersons, deletePerson}) => {
   }
 }
 
-export default Content
+export default Content;

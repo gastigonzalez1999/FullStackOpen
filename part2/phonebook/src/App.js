@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react'
-import Content from './components/Content'
-import Filter from './components/Filter'
-import Notification from './components/Notification'
-import PersonForm from './components/PersonForm'
-import personService from './services/persons'
+import React, { useState, useEffect } from 'react';
+import Filter from './components/Filter';
+import PersonForm from './components/PersonForm';
+import personService from './services/person';
+import Notification from './components/Notification';
+import Content from './components/Content';
 
 const App = () => {
   const [ persons, setPersons] = useState([])
@@ -40,10 +40,10 @@ const App = () => {
             setNewNumber('')
             setMessage(
               `${updatedPerson.name} was successfully updated`
-            )
+            );
             setTimeout(() => {
               setMessage(null)
-            }, 5000)
+            }, 5000);
           })
           .catch((error) => {
             console.log(error)
@@ -52,10 +52,10 @@ const App = () => {
             setNewNumber('')
             setMessage(
               `[ERROR] ${updatedPerson.name} was already deleted from server`
-            )
+            );
             setTimeout(() => {
               setMessage(null)
-            }, 5000)
+            }, 5000);
           })
       }
     } else {

@@ -18,13 +18,13 @@ const App = () => {
   }, [])
 
   const handleFilterChange = (event) => {
+    console.log(event.target.value)
     setNewFilter(event.target.value)
-    if (newFilter) {
-      const regex = new RegExp( newFilter, 'i' );
-      const filteredCountries = () => allCountries.filter(country => country.name.match(regex))
-      setCountries(filteredCountries)
-    }
-  }
+    const regex = new RegExp ( newFilter, 'i');
+    console.log(countries);
+    const filteredCountries = () => countries.filter(country => country.name.common.match(regex));
+    setCountries(filteredCountries)
+}
 
   return (
     <div>

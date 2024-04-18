@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 import axios from 'axios'
 const loginUrl = 'http://localhost:3001/api/login'
 
